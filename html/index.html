@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML</title>
+    <style>
+      .button {
+        display: inline-block;
+        border: 0;
+        padding: 8px 16px;
+        border-radius: 8px;
+        color: #f8fafc;
+        background-color: #9d174d;
+        font-family: system-ui;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #be185d;
+      }
+
+      .button:active {
+        transform: scale(0.95);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button">Click me</button>
+    <div class="button">Click me</div>
+
+    <script>
+      const buttons = document.querySelectorAll(".button")
+      for (const button of buttons) {
+        button.addEventListener("click", () => console.log("clicked"))
+      }
+    </script>
+  </body>
+</html>
